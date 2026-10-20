@@ -1,0 +1,43 @@
+    1  echo $SHELL
+    2  sudo cat /etc/passwd
+    3  clear
+    4  pwd
+    5  cd ~
+    6  pwd
+    7  mkdir /home/forensic01/logs
+    8  ls
+    9  cd logs
+   10  pwd
+   11  clear
+   12  ls
+   13  echo "2026-10-20 08:00:01 INFO user01 logged in successfully" > sys_events.log\necho "2026-10-20 08:02:14 INFO root started system maintenance" >> sys_events.log\necho "2026-10-20 08:05:32 WARNING user01 entered an incorrect password" >> sys_events.log\necho "2026-10-20 08:06:10 ERROR authentication service failure" >> sys_events.log\necho "2026-10-20 08:10:44 INFO user01 opened the dashboard" >> sys_events.log\necho "2026-10-20 08:12:03 WARNING disk usage reached 75 percent" >> sys_events.log\necho "2026-10-20 08:15:28 ERROR failed login attempt for root" >> sys_events.log\necho "2026-10-20 08:18:52 INFO root started a backup job" >> sys_events.log\necho "2026-10-20 08:20:17 INFO user01 viewed a report" >> sys_events.log\necho "2026-10-20 08:22:09 WARNING network latency detected" >> sys_events.log\necho "2026-10-20 08:25:41 ERROR backup job failed" >> sys_events.log\necho "2026-10-20 08:27:33 INFO root checked service status" >> sys_events.log\necho "2026-10-20 08:30:05 INFO user01 signed out" >> sys_events.log\necho "2026-10-20 08:32:16 WARNING repeated login failures detected" >> sys_events.log\necho "2026-10-20 08:35:49 ERROR permission check failed for user01" >> sys_events.log\necho "2026-10-20 08:38:22 INFO root updated a test configuration" >> sys_events.log\necho "2026-10-20 08:40:11 INFO system health check passed" >> sys_events.log\necho "2026-10-20 08:42:37 WARNING temporary storage is nearly full" >> sys_events.log\necho "2026-10-20 08:45:02 ERROR test process exited unexpectedly" >> sys_events.log\necho "2026-10-20 08:48:56 INFO user01 completed a practice task" >> sys_events.log\necho "2026-10-20 08:50:18 INFO root closed the maintenance session" >> sys_events.log\necho "2026-10-20 08:53:44 WARNING test alert requires review" >> sys_events.log\necho "2026-10-20 08:55:00 INFO user01 completed log creation" >> sys_events.log
+   14  ls
+   15  cat sys_events.log
+   16  grep "ERROR" sys_events.log
+   17  grep -E "root|user01" sys_events.log
+   18  grep "ERROR" sys_events.log | less
+   19  grep -e "root|user01" | less
+   20  grep -E "root|user01" sys_events.log | less
+   21  grep "ERROR" sys_events.log | less > error_report.txt
+   22  LS
+   23  ls
+   24  head -n5 sys_events.log
+   25  tail -n5 sys_events.log
+   26  cat sys_events.log
+   27  clear
+   28  touch confidential.txt
+   29  ls -l
+   30  ls -l confidential.txt
+   31  chmod g-rw, o-r confidential.txt
+   32  chmod g-rw,o-r confidential.txt
+   33  ls -l confidential.txt
+   34  sudo chown root confidential.txt
+   35  ls -l confidential.txt
+   36  whoami
+   37  nano confidential.txt
+   38  sudo useradd guest1
+   39  sudo useradd guest2
+   40  sudo usermod -aG sudo guest1
+   41  sudo userdel guest2
+   42  sudo cat /etc/passwd
+   43  history

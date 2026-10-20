@@ -1,0 +1,8 @@
+1. Explanation of grep, chown, and usermod
+grep: The grep command searches files for lines that match a specified word or pattern. In this task, I used it to find log entries containing ERROR and lines mentioning root or user01.
+
+chown: The chown command changes the ownership of a file or directory. In this task, I used sudo chown root:root confidential.txt to change the file's owner and group to root.
+
+usermod: The usermod command modifies an existing Linux user account. I used sudo usermod -aG sudo guest1 to add guest1 to the sudo group while preserving the user's existing supplementary group memberships.
+2. What I learned from accessing confidential.txt after changing ownership
+After changing the ownership of confidential.txt to root:root and setting its permissions to 600, I learned that only the file owner has permission to read and write to the file. When I tried to read or edit it as forensic01, access was denied because forensic01 was no longer the owner and had no permissions as a group member or other user. This demonstrated how Linux file ownership and permissions help protect confidential information from unauthorized access.

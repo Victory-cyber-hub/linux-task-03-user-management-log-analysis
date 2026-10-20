@@ -1,0 +1,5 @@
+2026-10-20 08:06:10 ERROR authentication service failure
+2026-10-20 08:15:28 ERROR failed login attempt for root
+2026-10-20 08:25:41 ERROR backup job failed
+2026-10-20 08:35:49 ERROR permission check failed for user01
+2026-10-20 08:45:02 ERROR test process exited unexpectedly

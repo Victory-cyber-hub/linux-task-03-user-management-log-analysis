@@ -1,0 +1,46 @@
+# Linux Task 03 — Commands Used
+
+Replace this template with the exact commands you actually ran in your lab. Remove commands you did not use and add any differences. Do not include passwords or secrets.
+
+## Part 1 — User setup
+sudo useradd -m -s /bin/bash forensic01
+sudo usermod -aG sudo forensic01
+sudo passwd forensic01
+id forensic01
+getent passwd forensic01
+ls -ld /home/forensic01
+su - forensic01
+mkdir -p /home/forensic01/logs
+cd /home/forensic01/logs
+
+## Part 1 — Create mock log file
+# Paste the exact cat heredoc or echo commands used to create 20+ lines.
+
+## Part 2 — Log filtering
+grep "ERROR" sys_events.log
+grep -E "root|user01" sys_events.log
+grep "ERROR" sys_events.log | less
+grep -E "root|user01" sys_events.log | less
+grep "ERROR" sys_events.log > error_report.txt
+cat error_report.txt
+head -n 5 sys_events.log
+tail -n 5 sys_events.log
+cat sys_events.log
+
+## Part 3 — Permissions and ownership
+touch confidential.txt
+chmod 600 confidential.txt
+ls -l confidential.txt
+sudo chown root:root confidential.txt
+cat confidential.txt
+echo "test edit" >> confidential.txt
+sudo cat /home/forensic01/logs/confidential.txt
+
+## Part 4 — User management
+sudo useradd -m -s /bin/bash guest1
+sudo useradd -m -s /bin/bash guest2
+sudo usermod -aG sudo guest1
+id guest1
+getent passwd guest2
+sudo userdel -r guest2
+getent passwd guest2

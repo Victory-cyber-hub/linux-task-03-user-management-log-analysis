@@ -1,0 +1,14 @@
+# Editor/OS clutter
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Do not commit real secrets or private keys
+*.pem
+*.key
+.env
+
+# Ignore accidental real log captures; keep the explicitly included mock sample
+*.pcap
+*.pcapng
